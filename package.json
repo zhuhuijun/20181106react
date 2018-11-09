@@ -28,6 +28,8 @@
     "webpack-dev-server": "^3.1.10"
   },
   "devDependencies": {
+    "less": "^3.8.1",
+    "react-transition-group": "^2.5.0",
     "webpack-cli": "^3.1.2"
   },
   "scripts": {
