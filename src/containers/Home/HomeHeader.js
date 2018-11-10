@@ -25,6 +25,11 @@ export default class HomeHeader extends Component {
             isShow: !this.state.isShow
         });
     }
+    changeType = (e) => {
+        console.info(e.target.dataset.type)
+        this.props.changeType(e.target.dataset.type);
+        this.changeShow();
+    }
 
     render() {
         return (
@@ -50,10 +55,10 @@ export default class HomeHeader extends Component {
                             <ul className='home-header-list' style={{
                                 ...defaultStyle,
                                 ...transitionStyles[state]
-                            }}>
-                                <li>全部课程</li>
-                                <li>Vue课程</li>
-                                <li>React课程</li>
+                            }} onClick={this.changeType.bind(this)}>
+                                <li data-type="0">全部课程</li>
+                                <li data-type="1">Vue课程</li>
+                                <li data-type="2">React课程</li>
                             </ul>
                         )
                     }
