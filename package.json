@@ -29,7 +29,12 @@
   },
   "devDependencies": {
     "less": "^3.8.1",
+    "react-swipe": "^5.1.1",
     "react-transition-group": "^2.5.0",
+    "redux-promise": "^0.6.0",
+    "redux-thunk": "^2.3.0",
+    "swipe-js-iso": "^2.0.4",
+    "swipe-react": "^1.0.4",
     "webpack-cli": "^3.1.2"
   },
   "scripts": {
