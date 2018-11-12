@@ -18,5 +18,24 @@ let sliders = require('./mock/sliders');
 app.get('/sliders', function (req, res) {
     res.json(sliders);
 })
+//http://localhost:3000/lessons?limit=5&offset=0&type=1
+let lessons = require('./mock/lessons');
+app.get('/lessons', function (req, res) {
+    let {limit, offset, type} = req.query;
+    limit = parseInt(limit);
+    offset = parseInt(offset);
+    let newlesson = lessons.filter(item => {
+        if (type === '0') return true;
+        return item.type === type;
+    });
+    //判断服务端是否有更多数据
+    let hasMore = true;
+    let len = newlesson.length;
+    if (len < (limit + offset)) {
+        hasMore = false;
+    }
+    newlesson = newlesson.slice(offset, offset + limit)
+    res.json({hasMore, list: newlesson});
+})
 app.listen(3000);
 console.info('the server is running');
