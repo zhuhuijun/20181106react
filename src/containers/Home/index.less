@@ -10,31 +10,55 @@
   z-index: 2;
   .home-header-logo {
     img {
-      width: 145px; height: 40px;
+      width: 145px;
+      height: 40px;
       margin-top: 8px;
     }
-    .home-header-btn{
+    .home-header-btn {
       float: right;
       margin-right: 11px;
     }
 
   }
-  .home-header-list{
+  .home-header-list {
     position: absolute;
     top: 50px;
     left: 0;
     width: 100%;
     background: #2a2a2a;
-    li{
+    li {
       line-height: 46px;
       border-top: 1px solid #464646;
       text-align: center;
     }
   }
-  .home-slider{
-    height: 170px;
-    div{
-      height: 100%;
-    };
+}
+
+.home-slider {
+  height: 170px;
+  position: relative;
+  img {
+    height: 100%;
+  }
+  div {
+    height: 100%;
+  }
+  .home-slider-dots {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    text-align: center;
+    width: 100%;
+    li {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background-color: #fff;
+      margin: 10px;
+    }
+    li.active {
+      background-color: red;
+    }
   }
 }
