@@ -4,10 +4,12 @@ import './index.less';
 import actions from '../../store/actions/home';
 import {connect} from 'react-redux';
 import HomeSlider from "./HomeSlider";
+import LessonList from "./LessonList";
 
 class Home extends Component {
     componentDidMount() {
         this.props.setSliders();
+        this.props.setLessons();
     }
 
     changeType = (val) => {
@@ -21,6 +23,17 @@ class Home extends Component {
                 <HomeHeader changeType={this.changeType}/>
                 <div className='content'>
                     {!this.props.slider.loading ? <HomeSlider lists={this.props.slider.list}/> : <div>Loading...</div>}
+                    <div className='container'>
+                        <h3>
+                            <i className='iconfont icon-wode_kecheng'></i>全部课程
+                        </h3>
+                        {!this.props.lesson.loading ? <LessonList lists={this.props.lesson.list}/> :
+                            <div>Loading...</div>}
+                        <button onClick={() => {
+                            this.props.setLessons()
+                        }}>加载更多
+                        </button>
+                    </div>
                 </div>
             </div>
         )

@@ -10,7 +10,7 @@ export default class HomeSlider extends Component {
     }
 
     render() {
-        console.info(this.props.lists);
+        //console.info(this.props.lists);
         let opts = {
             continuous: true, auto: 1000, transitionEnd: (index) => {
                 this.setState({index});

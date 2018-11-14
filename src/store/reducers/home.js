@@ -5,6 +5,13 @@ let initState = {
     slider: {
         loading: false,
         list: []
+    },
+    lesson: {
+        loading: false,
+        hasMore: true,
+        offset: 0,//偏移量
+        limit: 5,
+        list: []
     }
 };
 
@@ -18,6 +25,20 @@ export default function home(state = initState, action) {
             break;
         case  Types.GET_SLIDERS_SUCCESS:
             return {...state, slider: {loading: false, list: action.payload}};
+            break;
+        case Types.GET_LESSONS:
+            return {...state, lesson: {...state.lesson, loading: true}};
+            break;
+        case Types.GET_LESSONS_SUCCESS:
+            return {
+                ...state, lesson: {
+                    ...state.lesson,
+                    loading: false,
+                    hasMore: action.payload.hasMore,
+                    list: [...state.lesson.list, ...action.payload.list],
+                    offset: state.lesson.offset + action.payload.list.length
+                }
+            };
             break;
     }
     return state;

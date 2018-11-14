@@ -7,5 +7,64 @@ module.exports = [
         url:'http://www.zhufengpeixun.com/videoCourse/images/video_react.png',
         price:'￥100.00',
         type:'1'
+    },
+    {
+        id:2,
+        title:'React全栈架构',
+        'video':'http://7xil5b.com1.z0.glb.clouddn.com/zhufengpeixun.mp4',
+        poster:'http://www.zhufengpeixun.cn/react/img/react.jpg',
+        url:'http://www.zhufengpeixun.com/videoCourse/images/video_react.png',
+        price:'￥100.00',
+        type:'1'
+    },
+    {
+        id:3,
+        title:'React全栈架构',
+        'video':'http://7xil5b.com1.z0.glb.clouddn.com/zhufengpeixun.mp4',
+        poster:'http://www.zhufengpeixun.cn/react/img/react.jpg',
+        url:'http://www.zhufengpeixun.com/videoCourse/images/video_react.png',
+        price:'￥100.00',
+        type:'1'
+    },
+    {
+        id:4,
+        title:'React全栈架构',
+        'video':'http://7xil5b.com1.z0.glb.clouddn.com/zhufengpeixun.mp4',
+        poster:'http://www.zhufengpeixun.cn/react/img/react.jpg',
+        url:'http://www.zhufengpeixun.com/videoCourse/images/video_react.png',
+        price:'￥100.00',
+        type:'2'
+    },{
+        id:5,
+        title:'React全栈架构',
+        'video':'http://7xil5b.com1.z0.glb.clouddn.com/zhufengpeixun.mp4',
+        poster:'http://www.zhufengpeixun.cn/react/img/react.jpg',
+        url:'http://www.zhufengpeixun.com/videoCourse/images/video_react.png',
+        price:'￥100.00',
+        type:'2'
+    },{
+        id:6,
+        title:'React全栈架构',
+        'video':'http://7xil5b.com1.z0.glb.clouddn.com/zhufengpeixun.mp4',
+        poster:'http://www.zhufengpeixun.cn/react/img/react.jpg',
+        url:'http://www.zhufengpeixun.com/videoCourse/images/video_react.png',
+        price:'￥100.00',
+        type:'1'
+    },{
+        id:7,
+        title:'React全栈架构',
+        'video':'http://7xil5b.com1.z0.glb.clouddn.com/zhufengpeixun.mp4',
+        poster:'http://www.zhufengpeixun.cn/react/img/react.jpg',
+        url:'http://www.zhufengpeixun.com/videoCourse/images/video_react.png',
+        price:'￥100.00',
+        type:'1'
+    },{
+        id:8,
+        title:'React全栈架构',
+        'video':'http://7xil5b.com1.z0.glb.clouddn.com/zhufengpeixun.mp4',
+        poster:'http://www.zhufengpeixun.cn/react/img/react.jpg',
+        url:'http://www.zhufengpeixun.com/videoCourse/images/video_react.png',
+        price:'￥100.00',
+        type:'1'
     }
 ]
