@@ -40,6 +40,17 @@ export default function home(state = initState, action) {
                 }
             };
             break;
+        case Types.CLEAR_LESSON:
+            return {
+                ...state, lesson: {
+                    ...state.lesson,
+                    offset: 0,
+                    list: [],
+                    loading: false,
+                    hasMore: true
+                }
+            };
+            break;
     }
     return state;
 }

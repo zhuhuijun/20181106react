@@ -5,11 +5,15 @@ import actions from '../../store/actions/home';
 import {connect} from 'react-redux';
 import HomeSlider from "./HomeSlider";
 import LessonList from "./LessonList";
+import {loadMore, pullRefresh} from '../../util';
+import Loading from "../../components/Loading/Loading";
 
 class Home extends Component {
     componentDidMount() {
         this.props.setSliders();
         this.props.setLessons();
+        loadMore(this.x, this.props.setLessons);
+        pullRefresh(this.x, this.props.refresh);
     }
 
     changeType = (val) => {
@@ -21,18 +25,18 @@ class Home extends Component {
         return (
             <div>
                 <HomeHeader changeType={this.changeType}/>
-                <div className='content'>
-                    {!this.props.slider.loading ? <HomeSlider lists={this.props.slider.list}/> : <div>Loading...</div>}
+                <div className='content' ref={x => this.x = x}>
+                    {!this.props.slider.loading ? <HomeSlider lists={this.props.slider.list}/> : <Loading/>}
                     <div className='container'>
                         <h3>
                             <i className='iconfont icon-wode_kecheng'></i>全部课程
                         </h3>
-                        {!this.props.lesson.loading ? <LessonList lists={this.props.lesson.list}/> :
-                            <div>Loading...</div>}
-                        <button onClick={() => {
-                            this.props.setLessons()
-                        }}>加载更多
-                        </button>
+                        <LessonList lists={this.props.lesson.list}/>
+                        {this.props.lesson.loading ? <Loading/> : null}
+                        {/*<button onClick={() => {
+                             this.props.setLessons();
+                         }}>加载更多
+                         </button>*/}
                     </div>
                 </div>
             </div>

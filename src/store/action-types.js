@@ -8,3 +8,5 @@ export const GET_SLIDERS_SUCCESS = "GET_SLIDERS_SUCCESS";
 
 export const GET_LESSONS = "GET_LESSONS";
 export const GET_LESSONS_SUCCESS = "GET_LESSONS_SUCCESS";
+//清除课程
+export const CLEAR_LESSON="CLEAR_LESSON";

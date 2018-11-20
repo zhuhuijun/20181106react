@@ -4,10 +4,22 @@ import {getSliders, getLessons} from '../../api/home';
 
 let actions = {
     setCurrentLesson(type) {
-        return {
-            type: Types.SET_CURRENT_LESSON,
-            lesson: type
-        }
+        return (dispatch, getState) => {
+            dispatch({
+                type: Types.SET_CURRENT_LESSON,
+                lesson: type
+            });
+            dispatch({type: Types.CLEAR_LESSON});//清空课程
+            //获取课程
+            actions.setLessons()(dispatch, getState);
+        };
+    },
+    refresh() {
+        return (dispatch, getState) => {
+            dispatch({type: Types.CLEAR_LESSON});//清空课程
+            //获取课程
+            actions.setLessons()(dispatch, getState);
+        };
     },
     setSliders() {
         return (dispatch) => {//dispath 是中间件包装后的dispatch
