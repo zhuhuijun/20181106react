@@ -8,7 +8,8 @@ import TabBar from "./components/TabBar/TabBar";
 import './common/index.less';
 import store from './store';
 import {Provider} from 'react-redux';
-
+import Login from "./containers/Login/Login";
+import Reg from "./containers/Reg/Reg";
 render(<Provider store={store}>
     <HashRouter>
         <div>
@@ -16,6 +17,8 @@ render(<Provider store={store}>
                 <Route path='/home' component={Home}/>
                 <Route path='/profile' component={Profile}/>
                 <Route path='/lesson' component={Lesson}/>
+                <Route path='/login' component={Login}/>
+                <Route path='/reg' component={Reg}/>
             </Switch>
             <TabBar/>
         </div>

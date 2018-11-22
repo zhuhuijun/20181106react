@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import  bg from '../../images/login-bg.png';
 import  avatar from '../../images/avatar.png';
+import {Link} from 'react-router-dom';
 import './index.less';
 export default class Profile extends Component {
     render() {
@@ -11,7 +12,7 @@ export default class Profile extends Component {
                     <div className='avatar'>
                         <img src={avatar} alt=""/>
                     </div>
-                    <a href="" className='btn'>登录</a>
+                    <Link to="/login" className='btn'>登录</Link>
                 </div>
             </div>
         )
