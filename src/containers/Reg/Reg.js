@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import './index.less';
 import ReturnHeader from "../../components/ReturnHeader/ReturnHeader";
+import Alert from "../../components/Alert/Alert";
 import avatar from "../../images/avatar.png";
 import {connect} from 'react-redux';
 import actions from "../../store/actions/user";
@@ -26,6 +27,7 @@ class Reg extends Component {
                     <li>
                         <button onClick={this.reg.bind(this)}>注册</button>
                     </li>
+                    <li><Alert/></li>
                 </ul>
             </div>
         )

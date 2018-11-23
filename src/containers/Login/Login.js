@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import './index.less';
 import ReturnHeader from "../../components/ReturnHeader/ReturnHeader";
+import Alert from "../../components/Alert/Alert";
 import {Link} from 'react-router-dom'
 import avatar from "../../images/avatar.png";
 import {connect} from 'react-redux';
@@ -28,6 +29,7 @@ class Login extends Component {
                     <li>
                         <button onClick={this.login.bind(this)}>登录</button>
                     </li>
+                    <li><Alert/></li>
                 </ul>
             </div>
         )
