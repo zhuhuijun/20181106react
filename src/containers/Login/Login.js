@@ -8,9 +8,17 @@ import {connect} from 'react-redux';
 import actions from "../../store/actions/user";
 
 class Login extends Component {
+    componentDidMount() {
+        if (this.props.location.state) {
+            console.info(this.props.location.state.from);
+        }
+    }
+
     login() {
-        this.props.toLogin({username: this.username.value, userpwd: this.userpwd.value},
-            this.props.history.push);
+        let from = this.props.location.state && this.props.location.state.from;
+        this.props.toLogin({username: this.username.value, userpwd: this.userpwd.value}
+            , this.props.history.push
+            , from);
     }
 
     render() {

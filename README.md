@@ -27,3 +27,4 @@ npm install react  react-dom  redux react-redux react-router-dom redux-logger re
 #### cnpm install express --S
 #### cnpm install body-parser --S
 #### cnpm install express-session --S
+#### cnpm install babel-polyfill --S

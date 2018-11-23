@@ -1,14 +1,18 @@
 import * as Types from '../action-types';
-import {reg, login} from '../../api/user';
-import {getLessons, getSliders} from "../../api/home";
+import {reg, login, validate} from '../../api/user';
 
 let actions = {
-    toLogin(userInfo, push) {
+    toLogin(userInfo, push, from) {
         return (dispatch) => {
             login(userInfo).then((result) => {
                 dispatch({type: Types.SET_USERINFO, payload: result});
                 if (result.error === 0) {
-                    push('/profile');
+                    console.info('from', from);
+                    if (from) {
+                        push(from);
+                    } else {
+                        push('/profile');
+                    }
                 }
             });
         };
@@ -22,6 +26,11 @@ let actions = {
                     push('/login');
                 }
             });
+        };
+    },
+    toValidate() {
+        return (dispatch) => {
+            dispatch({type: Types.SET_USERINFO, payload: validate()});
         };
     }
 };

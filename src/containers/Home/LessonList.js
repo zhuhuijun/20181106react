@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {Link} from 'react-router-dom';
 
 export default class LessonList extends Component {
     render() {
@@ -8,9 +9,11 @@ export default class LessonList extends Component {
                 <ul>
                     {this.props.lists.map((item, index) => (
                         <li key={index}>
-                            <img src={item.url} alt=""/>
-                            <p>{item.title}</p>
-                            <span>{item.price}</span>
+                            <Link to={{pathname: '/detail/' + item.id, state: item}}>
+                                <img src={item.url} alt=""/>
+                                <p>{item.title}</p>
+                                <span>{item.price}</span>
+                            </Link>
                         </li>
                     ))}
 

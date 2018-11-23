@@ -72,7 +72,7 @@ app.get('/validate', function (req, res) {
     if (req.session.user) {
         res.json({msg: '', error: 0, user: {username: req.session.user.username}});
     } else {
-        res.json({msg: '', error: 0, user: {username: ''}});
+        res.json({msg: '', error: 0, user: null});
     }
 });
 app.listen(3000);

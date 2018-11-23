@@ -10,8 +10,13 @@ import Loading from "../../components/Loading/Loading";
 
 class Home extends Component {
     componentDidMount() {
-        this.props.setSliders();
-        this.props.setLessons();
+        if (!this.props.slider.list.length) {
+            this.props.setSliders();
+        }
+        if (!this.props.lesson.list.length) {
+            this.props.setLessons();
+        }
+
         loadMore(this.x, this.props.setLessons);
         pullRefresh(this.x, this.props.refresh);
     }

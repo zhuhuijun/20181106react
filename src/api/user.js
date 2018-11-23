@@ -16,3 +16,11 @@ export let login = (userInfo) => {
 export let reg = (userInfo) => {
     return axios.post('/reg',userInfo);
 };
+
+/**
+ *
+ * @return {AxiosPromise<any>}
+ */
+export let validate = () => {
+    return axios.get('/validate');
+};

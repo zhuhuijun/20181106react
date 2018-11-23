@@ -4,8 +4,13 @@ import avatar from '../../images/avatar.png';
 import {Link} from 'react-router-dom';
 import './index.less';
 import {connect} from 'react-redux';
+import actions from '../../store/actions/user';
 
 class Profile extends Component {
+    componentDidMount() {
+        this.props.toValidate();
+    }
+
     render() {
         return (
             <div className="profile">
@@ -22,4 +27,4 @@ class Profile extends Component {
         )
     }
 };
-export default connect((state) => ({...state.user}))(Profile);
+export default connect((state) => ({...state.user}), actions)(Profile);
