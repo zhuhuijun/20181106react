@@ -142,8 +142,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/server/server.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="523">
-              <caret line="75" selection-start-line="75" selection-end-line="75" />
+            <state relative-caret-position="504">
+              <caret line="74" column="24" selection-start-line="74" selection-start-column="24" selection-end-line="74" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -483,7 +483,7 @@
       <workItem from="1542722043962" duration="5173000" />
       <workItem from="1542760419082" duration="1194000" />
       <workItem from="1542847870126" duration="2587000" />
-      <workItem from="1542896864258" duration="6596000" />
+      <workItem from="1542896864258" duration="6659000" />
     </task>
     <task id="LOCAL-00001" summary="idea">
       <created>1541519313104</created>
@@ -562,11 +562,18 @@
       <option name="project" value="LOCAL" />
       <updated>1542901764472</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="login">
+      <created>1542933264264</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1542933264264</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50627000" />
+    <option name="totallyTimeSpent" value="50690000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -973,8 +980,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/server/server.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="523">
-          <caret line="75" selection-start-line="75" selection-end-line="75" />
+        <state relative-caret-position="504">
+          <caret line="74" column="24" selection-start-line="74" selection-start-column="24" selection-end-line="74" selection-end-column="24" />
         </state>
       </provider>
     </entry>

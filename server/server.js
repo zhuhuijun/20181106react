@@ -70,9 +70,9 @@ app.post('/reg', function (req, res) {
 });
 app.get('/validate', function (req, res) {
     if (req.session.user) {
-        res.json({msg: '登录成功', error: 0, user: {username: req.session.user.username}});
+        res.json({msg: '', error: 0, user: {username: req.session.user.username}});
     } else {
-        res.json({msg: '登录成功', error: 0, user: {username: ''}});
+        res.json({msg: '', error: 0, user: {username: ''}});
     }
 });
 app.listen(3000);
